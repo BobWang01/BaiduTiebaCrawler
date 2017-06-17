@@ -46,5 +46,5 @@ try:
 
             x = getImg(html, x)
 
-except:
+finally:
     print'Enter one or more'
