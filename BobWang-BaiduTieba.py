@@ -27,6 +27,7 @@ def getImg(html, x):
 print 'Choose 1 page enter one (one)'
 print 'Choose more pages enter more (more)'
 Choose = raw_input('Do you want to scapy only one page or more pages? ')
+
 try:
 
     if Choose == 'one':
@@ -36,15 +37,18 @@ try:
         html = getHtml(url)
         x = getImg(html, x)
 
+
     elif Choose == 'more':
-        x = 1
-        url = raw_input('Enter url: ')
-        for k in range(1, 10):
+        x=1
+        url = raw_input('Please enter the Url of BaiduTieba: ')
+        url1 = url
+        for k in range(1, 3):
             ul = url + str(k)
             print ul
             html = getHtml(ul)
+    # print html
+            x = getImg(html,x)
 
-            x = getImg(html, x)
-
-finally:
+except:
     print'Enter one or more'
+
